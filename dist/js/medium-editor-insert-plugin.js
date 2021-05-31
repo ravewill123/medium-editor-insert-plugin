@@ -2126,7 +2126,8 @@ this["MediumInsert"]["Templates"]["src/js/templates/images-toolbar.hbs"] = Handl
 
             if (images.length) {
                 for (i = 0; i < images.length; i++) {
-                    this.deleteFile(images[i].attr('src'), images[i]);
+                    // Workaround: Disable to delete the real files.
+                    // this.deleteFile(images[i].attr('src'), images[i]);
 
                     $parent = images[i].closest('.medium-insert-images');
                     images[i].closest('figure').remove();
